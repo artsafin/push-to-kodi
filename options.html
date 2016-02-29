@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Push-to-Kodi options</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <form>
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="host" type="url" required class="validate" value="http://192.168.x.y" pattern=".+">
+                    <label for="host" data-error="Incorrect host">Kodi host</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="user" type="text" value="kodi">
+                    <label for="user">User</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password">
+                    <label for="password" class="active">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <input type="checkbox" id="ping_kodi" />
+                    <label for="ping_kodi">Check if Kodi is alive</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 left-align">
+                    <button id="btn-reset" type="button">Reset settings</button>
+                </div>
+                <div class="col s6 right-align">
+                    <button type="submit">Save &amp; exit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="src/options.js"></script>
+</body>
+
+</html>

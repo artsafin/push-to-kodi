@@ -1,0 +1,9 @@
+{
+  "name": "chrome-push-to-kodi",
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "q": "1.0.1",
+    "underscore": "~1.8.3",
+    "Materialize": "materialize#~0.97.5"
+  }
+}

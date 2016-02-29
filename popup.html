@@ -1,0 +1,72 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Push-To-Kodi</title>
+    <meta charset="utf-8">
+
+    <link type="text/css" rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+
+        min-width: 350px;
+      }
+
+      h1 {
+        font-size: 100%;
+      }
+
+      a.disabled {
+        color: #ccc;
+        cursor: default;
+      }
+    </style>
+
+    <script src="src/popup.js"></script>
+  </head>
+  <body>
+    <script type="text/html" id="mediaList-item" data-tpl-content-sel="span.title" data-tpl-loop-index="idx">
+      <li class="collection-item mediaList-item">
+        <span class="title"></span>
+        <div class="secondary-content">
+          <a href="#playone" title="Play this" class="disabled">
+            <i class="material-icons">play_circle_outline</i>
+          </a>
+          <a href="#playfurther" title="Queue this and next" class="disabled">
+            <i class="material-icons">queue_play_next</i>
+          </a>
+        </div>
+      </li>
+    </script>
+
+    <h5 id="handlerTitle" class="center-align"></h5>
+
+    <div id="spinner" class="center-align">
+      <div class="preloader-wrapper small active">
+        <div class="spinner-layer spinner-green-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="collection" id="mediaList">
+    </ul>
+  </body>
+</html>
+
